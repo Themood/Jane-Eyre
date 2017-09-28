@@ -38,13 +38,13 @@ public static void start() {
 public static void begining() {
 	System.out.printf("You’re a young orphan living with your aunt who hates you with a passion. "
 			+ "\nYour cousins hates you and you'll have nothing left after your aunt dies. "
-			+ "You have the option to go to school at Thornwood. Your aunt has told the headmaster about "
+			+ "You have the option to go to school at Lowood. Your aunt has told the headmaster about "
 			+ "\nhow you lie "
 			+ "\nDo you GO or STAY with your family?");
 	while (inputloop == true) {
 		String command = input.nextLine();
 		if (command.equalsIgnoreCase("Go")) {
-			thronwood();
+			lowood();
 			break;
 			}
 		else if (command.equalsIgnoreCase("stay")) {
@@ -66,8 +66,8 @@ private static void deathone() {
 		}
 	}
 }
-private static void thronwood() {
-	System.out.println("Your time at thornwood is harsh, the headmaster hates you, winter is in full force  "
+private static void lowood() {
+	System.out.println("Your time at lowood is harsh, the headmaster hates you, winter is in full force  "
 			+ "\nand there is little food left, you could try and escape to the next town, or stick it out, "
 			+ "\naltertivly, you could try and steal the little food that is left for your own");
 	System.out.println("Do you ESCAPE, STEAL, or HOLD OUT");
@@ -90,7 +90,7 @@ private static void thronwood() {
 }
 private static void holdout() {
 	System.out.println("You somehow are alble to make it out of winter alive, but the same can't be said for "
-			+ "\nyour friend, who dies following her illness. Without her, Thornwood becomes even more loney,"
+			+ "\nyour friend, who dies following her illness. Without her, Lowood becomes even more loney,"
 			+ "\nYou could escape to the next town, or stay and finish your education" );
 	System.out.println("Do you ESCAPE or STAY");
 	while (inputloop == true) {
@@ -125,7 +125,7 @@ private static void steal() {
 }
 
 private static void escape() {
-	System.out.println("Leaving Thornwood at night, you arrive in the next town. With no jobs, "
+	System.out.println("Leaving Lowood at night, you arrive in the next town. With no jobs, "
 			+ "\nyou become nothing more then a common begger, eventually becoming a low level prostitute");
 	System.out.println("You lose! Try Again! Type 'Restart'");
 	while (inputloop == true) {
@@ -138,8 +138,73 @@ private static void escape() {
 }
 
 private static void stay() {
-	System.out.println("Staying in thornwood ");
+	System.out.println("You finish your education at Lowood. Folowing your graduation, you stay as a "
+			+ "\nteacher, before eventually leaving for a teaching positon at a manor called Lowood."
+			+ "\nMeeting a man called Rochester, you can't help but think he's an odd fellow. One night "
+			+ "\nyou awaken to screams of a fire. You could rush out of the house, or get some water to "
+			+ "\ndouse the flames.");
+	System.out.println("Do you LEAVE or DOUSE?");
+	while (inputloop == true) {
+		String command = input.nextLine();
+		if (command.equalsIgnoreCase("leave")) {
+			leave();
+			break;
+		}
+		else if (command.equalsIgnoreCase("douse")) {
+			douse();
+			break;
+		}
+	}
+}
+private static void douse() {
+	System.out.println("You fill a bucket of water and throw it on the flames, saving Rochester life. "
+			+ "\nSometime later Rochester asks you to marry him, you can't question your love of him, but"
+			+ "\nsomthing seems off" );
+	System.out.println("Do you say YES or NO?");
+	while (inputloop == true) {
+		String command = input.nextLine();
+		if (command.equalsIgnoreCase("Yes")) {
+			yes();
+			break;
+		}
+		else if (command.equalsIgnoreCase("no")) {
+			no();
+			break;
+		}
+	}
+		
+}
+private static void no() {
+	System.out.println("While Rochester insists, you hold your ground. Eventually he gives up! You move on "
+			+ "\nwith your life");
+	System.out.println("CONGRATS YOU WON, PARTLY CUZ I CANT STAY UP PROGRAMMING ANY MORE, THIS WAS WAY HARDER THEN "
+			+ " \nI THOUGHT" );
 	
+	
+	
+}
+private static void yes() {
+	System.out.println("You say yes, you're optimistic about your future,but your marriage stops before it even begins"
+			+ "\nupon finding out Rochester is still married to another women. Sadden about your lost, you leave Thornwoo");
+	System.out.println("You lose! Try Again! Type 'RESTART'" );
+	while (inputloop == true) {
+		String command =input.nextLine();
+		if (command.equalsIgnoreCase("restart")) {
+			begining();
+			break;
+		}
+	}
+}
+private static void leave() {
+	System.out.println("The house burns down, killing everyone inside");
+	System.out.println("You lose! Try Again!, Type 'RESTART'");
+	while (inputloop == true) {
+		String command = input.nextLine();
+		if (command.equalsIgnoreCase("restart")) {
+			begining();
+			break;
+		}
+	}
 }
 } 
 
